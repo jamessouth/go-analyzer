@@ -3,7 +3,7 @@ package sugg
 import (
 	"strings"
 
-	"github.com/jamessouth/astrav"
+	"github.com/jamessouth/go-analyzer/astrav"
 )
 
 // GeneralRegister registers all suggestion functions for this exercise.

@@ -7,7 +7,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/jamessouth/astrav"
+	"github.com/jamessouth/go-analyzer/astrav"
 )
 
 var (

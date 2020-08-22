@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/jamessouth/astrav"
+	"github.com/jamessouth/go-analyzer/astrav"
 	"github.com/jamessouth/go-analyzer/suggester/sugg"
 )
 

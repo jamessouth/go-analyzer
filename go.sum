@@ -1,8 +1,8 @@
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/jamessouth/astpatt v0.3.4 h1:vTVptny3AHPvIlszhv28ZM7QSpH1shH0zd1NPgf1OUE=
-github.com/jamessouth/astpatt v0.3.4/go.mod h1:LUODIQnueSsHalDyuq1mq2m+Pq/NLP/ZsNPUEYKwo2s=
+github.com/jamessouth/go-analyzer/astpatt v0.3.4 h1:vTVptny3AHPvIlszhv28ZM7QSpH1shH0zd1NPgf1OUE=
+github.com/jamessouth/go-analyzer/astpatt v0.3.4/go.mod h1:LUODIQnueSsHalDyuq1mq2m+Pq/NLP/ZsNPUEYKwo2s=
 github.com/jamessouth/astrav v0.4.3 h1:CL4ilqZcitfuAch0ojHKmFhDGQaK9s6u8C9uaRg3o4Y=
 github.com/jamessouth/astrav v0.4.3/go.mod h1:82GNq4tyMr6Dn3zjuUsiyEgsdYFhrUOb0rFEoVvheak=
 github.com/logrusorgru/aurora v0.0.0-20181002194514-a7b3b318ed4e h1:9MlwzLdW7QSDrhDjFlsEYmxpFyIoXmYRon3dt0io31k=

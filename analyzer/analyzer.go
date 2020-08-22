@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"path"
 
-	"github.com/jamessouth/astpatt"
 	"github.com/jamessouth/go-analyzer/assets"
+	"github.com/jamessouth/go-analyzer/astpatt"
 	"github.com/jamessouth/go-analyzer/astrav"
 	"github.com/jamessouth/go-analyzer/suggester"
 	"github.com/jamessouth/go-analyzer/suggester/sugg"

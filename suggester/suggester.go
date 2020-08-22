@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"runtime/debug"
 
-	"github.com/jamessouth/astrav"
+	"github.com/jamessouth/go-analyzer/astrav"
 	"github.com/jamessouth/go-analyzer/suggester/hamming"
 	"github.com/jamessouth/go-analyzer/suggester/raindrops"
 	"github.com/jamessouth/go-analyzer/suggester/sugg"

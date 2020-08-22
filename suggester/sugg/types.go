@@ -1,7 +1,7 @@
 package sugg
 
 import (
-	"github.com/jamessouth/astrav"
+	"github.com/jamessouth/go-analyzer/astrav"
 )
 
 // Suggester defines a list of comments including severity information.
