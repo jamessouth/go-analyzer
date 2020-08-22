@@ -30,10 +30,10 @@ func patternDirs(exercise string) ([]string, error) {
 	return paths, err
 }
 
-func loadPatterns(paths ...string) ([]*go-analyzer/astpatt.Pattern, error) {
+func loadPatterns(paths ...string) ([]*astpatt.Pattern, error) {
 	var (
 		err   error
-		patts []*go-analyzer/astpatt.Pattern
+		patts []*astpatt.Pattern
 	)
 	for _, dir := range paths {
 		pkg, e := loadPattern(dir)
@@ -41,7 +41,7 @@ func loadPatterns(paths ...string) ([]*go-analyzer/astpatt.Pattern, error) {
 			err = e
 			continue
 		}
-		patts = append(patts, go-analyzer/astpatt.ExtractPatternPermutations(pkg)...)
+		patts = append(patts, astpatt.ExtractPatternPermutations(pkg)...)
 	}
 	return patts, err
 }

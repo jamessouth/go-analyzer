@@ -8,7 +8,7 @@ import (
 	"net/http"
 
 	"github.com/jamessouth/go-analyzer/astpatt"
-	"github.com/jamessouth/astrav"
+	"github.com/jamessouth/go-analyzer/astrav"
 )
 
 var (
@@ -25,7 +25,7 @@ func main() {
 	}
 
 	for _, pkg := range packages {
-		pattern := go-analyzer/astpatt.ExtractPattern(pkg)
+		pattern := astpatt.ExtractPattern(pkg)
 		data, err := json.MarshalIndent(pattern, "", "  ")
 		fmt.Println(string(data))
 
