@@ -1,7 +1,7 @@
 package astpatt
 
 import (
-	"github.com/jamessouth/astrav"
+	"github.com/jamessouth/go-analyzer/astrav"
 )
 
 // Node represents a pattern node.
