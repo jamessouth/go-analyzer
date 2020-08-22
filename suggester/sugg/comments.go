@@ -80,7 +80,7 @@ func (s *commentList) load(cmt Comment) error {
 	return nil
 }
 
-var baseURL = "https://raw.githubusercontent.com/exercism/go-analyzer/comments/comments/"
+var baseURL = "https://raw.githubusercontent.com/jamessouth/go-analyzer/comments/comments/"
 
 func getURL(cmt Comment) string {
 	return baseURL + strings.ReplaceAll(cmt.ID(), ".", "/") + ".md"

@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"runtime/debug"
 
-	"github.com/exercism/go-analyzer/suggester/hamming"
-	"github.com/exercism/go-analyzer/suggester/raindrops"
-	"github.com/exercism/go-analyzer/suggester/sugg"
-	"github.com/exercism/go-analyzer/suggester/twofer"
 	"github.com/jamessouth/astrav"
+	"github.com/jamessouth/go-analyzer/suggester/hamming"
+	"github.com/jamessouth/go-analyzer/suggester/raindrops"
+	"github.com/jamessouth/go-analyzer/suggester/sugg"
+	"github.com/jamessouth/go-analyzer/suggester/twofer"
 )
 
 var exercisePkgs = map[string]sugg.Register{

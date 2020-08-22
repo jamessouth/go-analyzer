@@ -7,8 +7,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/exercism/go-analyzer/suggester/sugg"
 	"github.com/jamessouth/astrav"
+	"github.com/jamessouth/go-analyzer/suggester/sugg"
 )
 
 // Register registers all suggestion functions for this exercise.

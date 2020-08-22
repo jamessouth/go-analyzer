@@ -1,9 +1,10 @@
-module github.com/exercism/go-analyzer
+module github.com/jamessouth/go-analyzer
 
 go 1.14
 
 require (
 	github.com/jamessouth/astpatt v0.3.4
+	//github.com/jamessouth/astrav v0.4.3
 	// github.com/jamessouth/astrav v0.4.3
 	github.com/logrusorgru/aurora v0.0.0-20181002194514-a7b3b318ed4e
 	github.com/namsral/flag v1.7.4-pre

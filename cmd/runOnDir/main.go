@@ -10,8 +10,8 @@ import (
 	"path"
 	"strings"
 
-	"github.com/exercism/go-analyzer/analyzer"
-	"github.com/exercism/go-analyzer/assets"
+	"github.com/jamessouth/go-analyzer/analyzer"
+	"github.com/jamessouth/go-analyzer/assets"
 )
 
 var (

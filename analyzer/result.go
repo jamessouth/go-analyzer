@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"path"
 
-	"github.com/exercism/go-analyzer/suggester/sugg"
+	"github.com/jamessouth/go-analyzer/suggester/sugg"
 )
 
 // NewErrResult creates a result with an error.

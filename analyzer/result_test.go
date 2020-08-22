@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/exercism/go-analyzer/suggester/sugg"
+	"github.com/jamessouth/go-analyzer/suggester/sugg"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -3,7 +3,7 @@ package main
 import (
 	"testing"
 
-	"github.com/exercism/go-analyzer/assets"
+	"github.com/jamessouth/go-analyzer/assets"
 	"github.com/stretchr/testify/assert"
 )
 

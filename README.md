@@ -36,19 +36,19 @@ go build -tags build -o analyze .
 To `build` execute the following from the repositories `root` directory:
 
 ```bash
-docker build -t exercism/go-analyzer .
+docker build -t jamessouth/go-analyzer .
 ```
 
 To `run` from docker pass in the solutions path as a volume and execute with the necessary parameters:
 
 ```bash
-docker run -v $(PATH_TO_SOLUTION):/solution exercism/go-analyzer ${SLUG} /solution
+docker run -v $(PATH_TO_SOLUTION):/solution jamessouth/go-analyzer ${SLUG} /solution
 ```
 
 Example:
 
 ```bash
-docker run -v ~/solution-238382y7sds7fsadfasj23j:/solution exercism/go-analyzer two-fer /solution
+docker run -v ~/solution-238382y7sds7fsadfasj23j:/solution jamessouth/go-analyzer two-fer /solution
 ```
 
 

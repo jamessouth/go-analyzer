@@ -1,6 +1,6 @@
 package raindrops
 
-import "github.com/exercism/go-analyzer/suggester/sugg"
+import "github.com/jamessouth/go-analyzer/suggester/sugg"
 
 // exercise comments
 const (

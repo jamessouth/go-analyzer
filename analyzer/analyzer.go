@@ -5,11 +5,11 @@ import (
 	"net/http"
 	"path"
 
-	"github.com/exercism/go-analyzer/assets"
-	"github.com/exercism/go-analyzer/suggester"
-	"github.com/exercism/go-analyzer/suggester/sugg"
 	"github.com/jamessouth/astpatt"
-	"github.com/jamessouth/astrav"
+	"github.com/jamessouth/go-analyzer/assets"
+	"github.com/jamessouth/go-analyzer/astrav"
+	"github.com/jamessouth/go-analyzer/suggester"
+	"github.com/jamessouth/go-analyzer/suggester/sugg"
 	"github.com/pkg/errors"
 )
 

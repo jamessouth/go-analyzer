@@ -9,7 +9,7 @@ import (
 	"os"
 	"path"
 
-	"github.com/exercism/go-analyzer/analyzer"
+	"github.com/jamessouth/go-analyzer/analyzer"
 	"github.com/namsral/flag"
 )
 

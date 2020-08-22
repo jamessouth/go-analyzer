@@ -4,7 +4,7 @@ import (
 	"path"
 
 	"github.com/jamessouth/astpatt"
-	"github.com/jamessouth/astrav"
+	"github.com/jamessouth/go-analyzer/astrav"
 	"github.com/pkg/errors"
 )
 
