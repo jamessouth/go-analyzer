@@ -8,9 +8,9 @@ import (
 	"github.com/exercism/go-analyzer/assets"
 	"github.com/exercism/go-analyzer/suggester"
 	"github.com/exercism/go-analyzer/suggester/sugg"
+	"github.com/jamessouth/astpatt"
+	"github.com/jamessouth/astrav"
 	"github.com/pkg/errors"
-	"github.com/tehsphinx/astpatt"
-	"github.com/tehsphinx/astrav"
 )
 
 // Analyze analyses a solution and returns the Result

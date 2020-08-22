@@ -3,9 +3,9 @@ package assets
 import (
 	"path"
 
+	"github.com/jamessouth/astpatt"
+	"github.com/jamessouth/astrav"
 	"github.com/pkg/errors"
-	"github.com/tehsphinx/astpatt"
-	"github.com/tehsphinx/astrav"
 )
 
 // LoadPatterns loads the patterns for given exercise.

@@ -8,7 +8,7 @@ import (
 	"github.com/exercism/go-analyzer/suggester/raindrops"
 	"github.com/exercism/go-analyzer/suggester/sugg"
 	"github.com/exercism/go-analyzer/suggester/twofer"
-	"github.com/tehsphinx/astrav"
+	"github.com/jamessouth/astrav"
 )
 
 var exercisePkgs = map[string]sugg.Register{

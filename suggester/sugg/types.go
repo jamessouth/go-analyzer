@@ -1,7 +1,7 @@
 package sugg
 
 import (
-	"github.com/tehsphinx/astrav"
+	"github.com/jamessouth/astrav"
 )
 
 // Suggester defines a list of comments including severity information.

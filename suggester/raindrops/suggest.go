@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/exercism/go-analyzer/suggester/sugg"
-	"github.com/tehsphinx/astrav"
+	"github.com/jamessouth/astrav"
 )
 
 // Register registers all suggestion functions for this exercise.

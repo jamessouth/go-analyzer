@@ -3,7 +3,7 @@ package sugg
 import (
 	"strings"
 
-	"github.com/tehsphinx/astrav"
+	"github.com/jamessouth/astrav"
 )
 
 // GeneralRegister registers all suggestion functions for this exercise.

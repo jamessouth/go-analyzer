@@ -11,10 +11,10 @@ import (
 	"github.com/exercism/go-analyzer/analyzer"
 	"github.com/exercism/go-analyzer/assets"
 	"github.com/exercism/go-analyzer/suggester/sugg"
+	"github.com/jamessouth/astrav"
 	"github.com/logrusorgru/aurora"
 	"github.com/pmezard/go-difflib/difflib"
 	"github.com/stretchr/testify/assert"
-	"github.com/tehsphinx/astrav"
 )
 
 // Tests contains the test cases.

@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/exercism/go-analyzer/suggester/sugg"
+	"github.com/jamessouth/astrav"
 	"github.com/stretchr/testify/assert"
-	"github.com/tehsphinx/astrav"
 )
 
 var suggestTests = []struct {
