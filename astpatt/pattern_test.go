@@ -1,4 +1,4 @@
-package go-analyzer/astpatt
+package astpatt
 
 import (
 	"errors"
@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/jamessouth/astrav"
+	"github.com/jamessouth/go-analyzer/astrav"
 	"github.com/stretchr/testify/assert"
 )
 

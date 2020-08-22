@@ -1,7 +1,7 @@
-package go-analyzer/astpatt
+package astpatt
 
 import (
-	"github.com/jamessouth/astrav"
+	"github.com/jamessouth/go-analyzer/astrav"
 )
 
 // FuncDecl node

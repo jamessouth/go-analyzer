@@ -1,4 +1,4 @@
-package go-analyzer/astpatt
+package astpatt
 
 import (
 	"reflect"

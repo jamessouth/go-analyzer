@@ -1,10 +1,10 @@
-package go-analyzer/astpatt
+package astpatt
 
 import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/jamessouth/astrav"
+	"github.com/jamessouth/go-analyzer/astrav"
 	"github.com/pmezard/go-difflib/difflib"
 )
 

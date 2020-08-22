@@ -1,6 +1,6 @@
-package go-analyzer/astpatt
+package astpatt
 
-import "github.com/jamessouth/astrav"
+import "github.com/jamessouth/go-analyzer/astrav"
 
 // Special node types
 const (
