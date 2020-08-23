@@ -2,19 +2,21 @@ package slices
 
 // exercise comments
 const (
-	NoElse            = "go.slices.no_else"
-	TwoReturns        = "go.slices.two_returns"
-	OneIf             = "go.slices.one_if"
-	OneConditionInIf  = "go.slices.one_condition_in_if"
-	TwoConditionsInIf = "go.slices.two_conditions_in_if"
-	NoSwitch          = "go.slices.no_switch"
-	OneAppend         = "go.slices.one_append"
-	NoColonSlice      = "go.slices.no_colon_slice"
-	OneMake           = "go.slices.one_make"
-	OneFor            = "go.slices.one_for"
-	NoRange           = "go.slices.no_range"
-	NotRecursive      = "go.slices.not_recursive"
-	MakeHasThreeArgs  = "go.slices.make_has_three_args"
+	Else                    = "go.slices.else"
+	NotTwoReturns           = "go.slices.not_two_returns"
+	NotOneIf                = "go.slices.not_one_if"
+	NotOneIfCondition       = "go.slices.not_one_if_condition"
+	NotTwoIfConditions      = "go.slices.not_two_if_conditions"
+	Switch                  = "go.slices.switch"
+	NotOneAppend            = "go.slices.not_one_append"
+	ColonSlice              = "go.slices.colon_slice"
+	NotOneMake              = "go.slices.not_one_make"
+	NotOneFor               = "go.slices.not_one_for"
+	NotThreeClauseLoop      = "go.slices.not_three_clause_loop"
+	Range                   = "go.slices.range"
+	Recursive               = "go.slices.recursive"
+	MakeDoesntHaveThreeArgs = "go.slices.make_doesnt_have_three_args"
+	NotOneEllipsis          = "go.slices.not_one_ellipsis"
 )
 
 // Severity defines how severe a comment is. A sum over all comments of 5 means no approval.
@@ -23,24 +25,19 @@ const (
 // should block approval?
 // We can be very strict on automated comments since the student has a very fast feedback loop.
 var severity = map[string]int{
-	MissingEntryFunc:     5,
-	FuncSignatureChanged: 5,
-	MixtureRunesBytes:    3,
-	RuneByteIndex:        2,
-	DeclareWhenNeeded:    1,
-	ErrorMsgFormat:       1,
-	IncreaseOperator:     2,
-	InvertIf:             3,
-	NakedReturns:         3,
-	ZeroValueOnErr:       2,
-	RuneToByte:           3,
-	ToStringConversion:   3,
-	StringsSplitUsed:     5,
-	ComparingBytes:       0,
-	DefineEmptyErr:       1,
-	ReturnOnError:        3,
-	CaseInsensitive:      3,
-	ExtraIfStringsEmpty:  0,
-	MinSliceRuneConv:     2,
-	CompBytesInDisguise:  5,
+	Else:                    5,
+	NotTwoReturns:           5,
+	NotOneIf:                5,
+	NotOneIfCondition:       5,
+	NotTwoIfConditions:      5,
+	Switch:                  5,
+	NotOneAppend:            5,
+	ColonSlice:              5,
+	NotOneMake:              5,
+	NotOneFor:               5,
+	NotThreeClauseLoop:      5,
+	Range:                   5,
+	Recursive:               5,
+	MakeDoesntHaveThreeArgs: 5,
+	NotOneEllipsis:          2,
 }
