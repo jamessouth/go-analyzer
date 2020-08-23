@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"os"
 	"path"
+	"path/filepath"
 	"strings"
 
 	"github.com/pkg/errors"
@@ -29,14 +30,20 @@ import (
 //
 func Parse(fset *token.FileSet, root http.FileSystem, dir string, filter func(os.FileInfo) bool,
 	mode parser.Mode) (pkgs map[string]*ast.Package, fileSources map[string][]byte, first error) {
-	fmt.Println("hello from dsouth fork", root, dir)
-	fd, err := root.Open(dir)
+	rootStr := fmt.Sprintf("%v", root)
+	if rootStr == "" {
+		rootStr = "."
+	}
+	fullName := filepath.Join(rootStr, filepath.FromSlash(path.Clean("/"+dir)))
+
+	fd, err := os.Open(fullName)
 	if err != nil {
 		return nil, nil, errors.WithStack(err)
 	}
 	defer fd.Close()
 
 	list, err := fd.Readdir(-1)
+	// fmt.Println("lenlist", len(list))
 	if err != nil {
 		return nil, nil, errors.WithStack(err)
 	}
@@ -44,12 +51,17 @@ func Parse(fset *token.FileSet, root http.FileSystem, dir string, filter func(os
 	pkgs = make(map[string]*ast.Package)
 	fileSources = make(map[string][]byte)
 	for _, d := range list {
+		// fmt.Println("\ndddd", d, len(list))
 		filename := d.Name()
+		// fmt.Println("\nparseeeeee", fullName, filename)
 		if !strings.HasSuffix(filename, ".go") || filter != nil && !filter(d) {
 			continue
 		}
-		fileBytes, err := getSource(path.Join(dir, filename), root)
+		// fmt.Println("\nfilenames", filename)
+		fileBytes, err := getSource(path.Join(fullName, filename), root)
+		// fmt.Println("\nname", path.Join(fullName, filename))
 		if err != nil {
+			fmt.Println("\ndsouth fork", err)
 			if first == nil {
 				first = err
 			}
@@ -80,7 +92,8 @@ func Parse(fset *token.FileSet, root http.FileSystem, dir string, filter func(os
 }
 
 func getSource(path string, dir http.FileSystem) ([]byte, error) {
-	f, err := dir.Open(path)
+	// fmt.Println("\ncalled", path)
+	f, err := os.Open(path)
 	if err != nil {
 		return nil, errors.WithStack(err)
 	}
