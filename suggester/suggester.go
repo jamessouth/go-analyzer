@@ -7,6 +7,7 @@ import (
 	"github.com/jamessouth/go-analyzer/astrav"
 	"github.com/jamessouth/go-analyzer/suggester/hamming"
 	"github.com/jamessouth/go-analyzer/suggester/raindrops"
+	"github.com/jamessouth/go-analyzer/suggester/slices"
 	"github.com/jamessouth/go-analyzer/suggester/sugg"
 	"github.com/jamessouth/go-analyzer/suggester/twofer"
 )
@@ -16,6 +17,7 @@ var exercisePkgs = map[string]sugg.Register{
 	"two-fer":   twofer.Register,
 	"hamming":   hamming.Register,
 	"raindrops": raindrops.Register,
+	"slices":    slices.Register,
 }
 
 // Suggest statically analysis the solution and returns a list of comments to provide.
