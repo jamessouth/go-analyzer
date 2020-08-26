@@ -10,10 +10,41 @@ var Register = sugg.Register{
 	Funcs: []sugg.SuggestionFunc{
 
 		examElse,
-		examSwitch,
+		// examSwitch,
 	},
 	Severity: severity,
 }
+
+// SetItem writes an item to a slice at given position overwriting an existing value.
+// If the index is out of range it is be appended.
+// func SetItem(slice []uint8, index int, value uint8) []uint8 {
+// 	if len(slice) <= index || index < 0 {
+// 		return append(slice, value)
+// 	}
+// 	slice[index] = value
+// 	return slice
+// }
+
+// // PrefilledSlice creates a slice of given length and prefills it with the given value.
+// func PrefilledSlice(value, length int) []int {
+// 	if length < 1 {
+// 		return nil
+// 	}
+
+// 	var s = make([]int, 0, length)
+// 	for i := 0; i < length; i++ {
+// 		s = append(s, value)
+// 	}
+// 	return s
+// }
+
+// // RemoveItem removes an item from a slice by modifying the existing slice.
+// func RemoveItem(slice []int, index int) []int {
+// 	if len(slice) <= index || index < 0 {
+// 		return slice
+// 	}
+// 	return append(slice[:index], slice[index+1:]...)
+// }
 
 // checks if `else` was used
 func examElse(pkg *astrav.Package, suggs sugg.Suggester) {
@@ -24,12 +55,12 @@ func examElse(pkg *astrav.Package, suggs sugg.Suggester) {
 }
 
 // checks if `switch` was used
-func examSwitch(pkg *astrav.Package, suggs sugg.Suggester) {
-	nodes := pkg.FindByName("switch")
-	if len(nodes) != 0 {
-		suggs.AppendUnique(Switch)
-	}
-}
+// func examSwitch(pkg *astrav.Package, suggs sugg.Suggester) {
+// 	nodes := pkg.FindByNodeType(astrav.NodeTypeSwitchStmt)
+// 	if len(nodes) != 0 {
+// 		suggs.AppendUnique(Switch)
+// 	}
+// }
 
 // func examSliceRuneConv(pkg *astrav.Package, suggs sugg.Suggester) {
 // 	nodes := pkg.FindByName("[]rune")
