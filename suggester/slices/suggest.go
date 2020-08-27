@@ -1,6 +1,9 @@
 package slices
 
 import (
+	"fmt"
+	"strings"
+
 	"github.com/jamessouth/go-analyzer/astrav"
 	"github.com/jamessouth/go-analyzer/suggester/sugg"
 )
@@ -9,49 +12,12 @@ import (
 var Register = sugg.Register{
 	Funcs: []sugg.SuggestionFunc{
 
-		examElse,
 		// examSwitch,
+		// examReturns,
+		// examIfs,
+		examIfTwoConditions,
 	},
 	Severity: severity,
-}
-
-// SetItem writes an item to a slice at given position overwriting an existing value.
-// If the index is out of range it is be appended.
-// func SetItem(slice []uint8, index int, value uint8) []uint8 {
-// 	if len(slice) <= index || index < 0 {
-// 		return append(slice, value)
-// 	}
-// 	slice[index] = value
-// 	return slice
-// }
-
-// // PrefilledSlice creates a slice of given length and prefills it with the given value.
-// func PrefilledSlice(value, length int) []int {
-// 	if length < 1 {
-// 		return nil
-// 	}
-
-// 	var s = make([]int, 0, length)
-// 	for i := 0; i < length; i++ {
-// 		s = append(s, value)
-// 	}
-// 	return s
-// }
-
-// // RemoveItem removes an item from a slice by modifying the existing slice.
-// func RemoveItem(slice []int, index int) []int {
-// 	if len(slice) <= index || index < 0 {
-// 		return slice
-// 	}
-// 	return append(slice[:index], slice[index+1:]...)
-// }
-
-// checks if `else` was used
-func examElse(pkg *astrav.Package, suggs sugg.Suggester) {
-	nodes := pkg.FindByName("else")
-	if len(nodes) != 0 {
-		suggs.AppendUnique(Else)
-	}
 }
 
 // checks if `switch` was used
@@ -61,6 +27,34 @@ func examElse(pkg *astrav.Package, suggs sugg.Suggester) {
 // 		suggs.AppendUnique(Switch)
 // 	}
 // }
+
+// checks for two returns
+// func examReturns(pkg *astrav.Package, suggs sugg.Suggester) {
+// 	nodes := pkg.FindByNodeType(astrav.NodeTypeReturnStmt)
+// 	if len(nodes) != 2 {
+// 		suggs.AppendUnique(NotTwoReturns)
+// 	}
+// }
+
+// checks for only one 'if'
+// func examIfs(pkg *astrav.Package, suggs sugg.Suggester) {
+// 	nodes := pkg.FindByNodeType(astrav.NodeTypeIfStmt)
+// 	if len(nodes) != 1 {
+// 		suggs.AppendUnique(NotOneIf)
+// 	}
+// }
+
+// checks that 'if' has two conditions
+func examIfTwoConditions(pkg *astrav.Package, suggs sugg.Suggester) {
+	// orNodes := pkg.FindByToken(token.LOR)
+	// andNodes := pkg.FindByToken(token.LAND)
+	nodes := pkg.FindByNodeType(astrav.NodeTypeIfStmt)
+	conditions := nodes[0].Children()[0].GetSourceString()
+	fmt.Println(conditions)
+	if strings.Count(conditions, "||")+strings.Count(conditions, "&&") != 1 {
+		suggs.AppendUnique(NotTwoIfConditions)
+	}
+}
 
 // func examSliceRuneConv(pkg *astrav.Package, suggs sugg.Suggester) {
 // 	nodes := pkg.FindByName("[]rune")

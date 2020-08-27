@@ -2,7 +2,6 @@ package slices
 
 // exercise comments
 const (
-	Else                    = "go.slices.else"
 	NotTwoReturns           = "go.slices.not_two_returns"
 	NotOneIf                = "go.slices.not_one_if"
 	NotOneIfCondition       = "go.slices.not_one_if_condition"
@@ -25,7 +24,6 @@ const (
 // should block approval?
 // We can be very strict on automated comments since the student has a very fast feedback loop.
 var severity = map[string]int{
-	Else:                    5,
 	NotTwoReturns:           5,
 	NotOneIf:                5,
 	NotOneIfCondition:       5,
